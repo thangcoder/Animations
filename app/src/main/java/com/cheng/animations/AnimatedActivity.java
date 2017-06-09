@@ -52,4 +52,10 @@ public class AnimatedActivity extends Activity {
 		hour.startAnimation(hourTurn);
 
 	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		overridePendingTransition(R.anim.scale_in,R.anim.scale_out);
+	}
 }
